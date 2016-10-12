@@ -49,7 +49,7 @@ RUN mkdir -p /opt/sonatype/nexus \
   && chown -R root:root /opt/sonatype/nexus 
 
 ## configure nexus runtime env
-ENV NEXUS_CONTEXT /
+ENV NEXUS_CONTEXT nexus
 RUN sed \
     -e "s|karaf.home=.|karaf.home=/opt/sonatype/nexus|g" \
     -e "s|karaf.base=.|karaf.base=/opt/sonatype/nexus|g" \
